@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hello World 2 Apps
 
-## Available Scripts
+> Hello world using react and ror together
 
-In the project directory, you can run:
+[Link to the React app](https://github.com/AxelSoler/hello-react-front-end)
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Ruby on Rails
+- PostgreSQL
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Getting Started
 
-### `npm test`
+To get a local copy up and running follow these simple steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Ruby ruby-3.1.2 installed
+- PostgreSQL dbms running
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Open your terminal and navigate to the folder you would like to save the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Type these commands into the terminal:
 
-### `npm run eject`
+```
+git clone https://github.com/AxelSoler/hello-rails-back-end.git
+cd my_new_rails_app
+bundle install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- You will need a `.env` file before you install and run the project. The `.env` file contains environment variables needed to deploy the webpage. There is a commented `.env.example` file you can use as a guide to configure your own. Type the following commands into the terminal (or Git Bash, if using Windows) to create your `.env` file:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+cp .env.example .env
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+rails secret
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Edit file .env
 
-## Learn More
+  - Provide the values for the variables
+    - DATABASE_HOST
+    - DATABASE_USER
+    - DATABASE_PASSWORD
+    - DEVISE_JWT_SECRET_KEY
+  - Assign the value returned by the `rails secret` to DEVISE_JWT_SECRET_KEY.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Type this commands into the terminal:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+rails db:reset
+```
 
-### Code Splitting
+### Run application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Type this command into the terminal:
 
-### Analyzing the Bundle Size
+```
+rails server
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Open your web browser at [http://127.0.0.1:3000/](http://127.0.0.1:3000/)
 
-### Making a Progressive Web App
+### Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Type this command into the terminal:
 
-### Advanced Configuration
+```
+rspec
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Author
 
-### Deployment
+👤 **Axel Soler**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- GitHub: [@AxelSoler](https://github.com/AxelSoler)
+- LinkedIn: [Axel Soler](https://www.linkedin.com/in/axel-soler-685985232/)
+- Twitter: [Axel Soler](https://twitter.com/AxelSoler18)
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/) for the motivation.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
